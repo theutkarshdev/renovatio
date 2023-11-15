@@ -843,10 +843,8 @@
 		href='wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min52d5.css?ver=5.15.3' type='text/css'
 		media='all' />
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-	<script type='text/javascript' src='wp-includes/js/jquery/jquery.min5aed.js?ver=3.6.4' id='jquery-core-js'></script>
-	<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min6b00.js?ver=3.4.0'
-		id='jquery-migrate-js'></script>
-	<link rel="https://api.w.org/" href="wp-json/index.html" />
+	<script type='text/javascript' src='https://utkarsh.online/js/jquery.js' id='jquery-core-js'></script>
+
 	<link rel="alternate" type="application/json" href="wp-json/wp/v2/pages/11.json" />
 	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
 	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
@@ -1089,37 +1087,63 @@
 					<h3>DESIGN YOUR NEXT COMMERCIAL SPACE WITH THE MOST TRUSTED INTERIOR DESIGN FIRM</h3>
 					<form>
 						<div class="tail-form-box">
-							<input placeholder="Kindly enter your name.." type="text" name="" id="">
-							<select>
-								<option>Select option</option>
-								<option>Select option</option>
-								<option>Select option</option>
-								<option>Select option</option>
-							</select>
+							<div class="input-field">
+								<input type="text" id="contact-fullname" name="sender_name"
+									placeholder="Your Name" />
+								<p id="contact-nameErr" class="text-danger"></p>
+							</div>
+
+							<div class="input-field">
+								<select>
+									<option>Select option</option>
+									<option>Select option</option>
+									<option>Select option</option>
+									<option>Select option</option>
+								</select>
+								<p class="text-danger"></p>
+							</div>
+
+
+							
 						</div>
 
 						<div class="tail-form-box">
-							<input placeholder="Kindly enter your name.." type="text" name="" id="">
-							<select>
-								<option>Select option</option>
-								<option>Select option</option>
-								<option>Select option</option>
-								<option>Select option</option>
-							</select>
+							<div class="input-field">
+								<input type="text" id="contact-email" name="sender_email"
+									placeholder="Your Mail" />
+								<p id="contact-emailErr" class="text-danger"></p>
+							</div>
+							<div class="input-field">
+								<select>
+									<option>Select option</option>
+									<option>Select option</option>
+									<option>Select option</option>
+									<option>Select option</option>
+								</select>
+								<p class="text-danger"></p>
+							</div>
 						</div>
 
 
 						<div class="tail-form-box">
-							<input placeholder="Kindly enter your name.." type="text" name="" id="">
-							<select>
-								<option>Select option</option>
-								<option>Select option</option>
-								<option>Select option</option>
-								<option>Select option</option>
-							</select>
+							<div class="input-field">
+								<input type="text" maxlength="13" id="contact-phone" name="sender_phone"
+									placeholder="Your Contact" onkeypress="return onlyNumberKey(event)" />
+								<p id="contact-phoneErr" class="text-danger"></p>
+							</div>
+							<div class="input-field">
+								<select>
+									<option>Select option</option>
+									<option>Select option</option>
+									<option>Select option</option>
+									<option>Select option</option>
+								</select>
+								<p class="text-danger"></p>
+							</div>
 						</div>
-
-						<button>Submit</button>
+						<div class="btn-box">
+							<button id="submitButton" type="button">Submit</button>
+						</div>
 					</form>
 				</div>
 				<div class="elementor-background-overlay"></div>
@@ -2298,7 +2322,7 @@
 
 
 														<div class="bdt-ps-slide-img"
-															style="background-image: url('wp-content/uploads/sites/2/2023/06/stylish-compositon-modern-living-room-interior-with-frotte-armchwp-sofa-plants-painting-wooden-commode-side-table-elegant-home-accessories-t')">
+															style="background-image: url('wp-content/uploads/sites/2/2023/06/composition-living-room-interior-with-copy-spaceplants-cacti-boho-accessories-template.jpg')">
 														</div>
 
 
@@ -3401,9 +3425,8 @@
 				</div>
 			</section>
 
-			<!-- <div class="modal-backlay">
-				<div class="modal-container">
-					<div class="modal-close"><i class="fa fa-times"></i></div>
+			<div id="successModalOverlay" style="display: none;" class="modal-backlay">
+				<div id="successModal" style="display: none;" class="modal-container">
 					<div class="modal-body">
 						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
 							<circle class="path circle" fill="none" stroke="#198754" stroke-width="6"
@@ -3414,10 +3437,10 @@
 						</svg>
 						<h4>Successfully Sent !!</h4>
 						<p>We have received your query and our best expert reach out you shortly.</p>
-						<button type="button">Ok, Got it</button>
+						<button id="closeSuccessModal" type="button">Ok, Got it</button>
 					</div>
 				</div>
-			</div> -->
+			</div>
 		</div>
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="site-info">
@@ -3569,6 +3592,7 @@
 		id='prime-slider-site-js'></script>
 	<script type='text/javascript' src='wp-includes/js/underscore.mind584.js?ver=1.13.4' id='underscore-js'></script>
 	<script type='text/javascript' src='wp-includes/js/wp-util.min18cf.js?ver=6.2.3' id='wp-util-js'></script>
+	<script src="./main-custom.js"></script>
 </body>
 
 </html>

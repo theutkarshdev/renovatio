@@ -3525,11 +3525,6 @@ html :where(.is-position-sticky) {
     transform: translate(-50%, -50%);
     text-align: center;
 
-    & .modal-close{
-      position: absolute;
-      top: 10px;
-      right: 15px;
-    }
     & .modal-body h4{
       margin: 20px 0 10px 0 !important;
       color: #198754;
@@ -3553,4 +3548,16 @@ html :where(.is-position-sticky) {
       margin-top: 20px;
     }
   }
+}
+.input-field{
+  width: 50%;
+
+  & p{
+    margin: 0;
+    color: #d9534f;
+    line-height: 1.5;
+  }
+}
+.btn-box{
+  margin-top: 20px;
 }
