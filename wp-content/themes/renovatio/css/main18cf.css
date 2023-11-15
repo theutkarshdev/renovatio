@@ -1082,7 +1082,7 @@ label input {
 textarea,
 select {
   padding: 1em;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   width: 100%;
   font-size: 13px;
   color: inherit;

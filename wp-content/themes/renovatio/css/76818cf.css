@@ -56,15 +56,6 @@
     margin: 4em 0;
   }
 
-  /* FORMS */
-  .input-text,
-  select,
-  .uploader,
-  .selector,
-  textarea {
-    margin-bottom: 10px;
-  }
-
   /* Jet Elements Subscribe Input Fix */
   .jet-elements .input-text,
   .jet-elements select,
