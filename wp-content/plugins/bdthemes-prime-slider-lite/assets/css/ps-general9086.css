@@ -10,7 +10,6 @@
   right: 0;
   bottom: 0;
   z-index: 1;
-  display: none;
 }
 .bdt-prime-slider-skin-slide .bdt-slideshow-item .bdt-ps-slide-img {
   position: absolute;
@@ -55,7 +54,7 @@
   display: none;
   position: absolute;
   right: 0;
-  bottom: 25px;
+  bottom: 0px;
   width: 80%;
   padding: 15px;
   background: rgba(0, 0, 0, 0.5);

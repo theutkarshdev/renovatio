@@ -25,7 +25,7 @@ function emailValidate(email, emailErr) {
   }
 }
 function phoneValidate(phone, phoneErr) {
-  var phoneRegex = /[0-9]/;
+  var phoneRegex = /^\d{10}$/;
   if (phone.value !== "" && phoneRegex.test(phone.value)) {
     phoneErr.innerHTML = "";
     phone.style.borderColor = "#ccc";
@@ -68,34 +68,34 @@ function RequiredField(field, Err) {
 }
 
 $(document).ready(function () {
-  $("#submitButton").click(function (event) {
+  $("#leadSubmitButton").click(function (event) {
     event.preventDefault();
-    var contactUName = document.getElementById("contact-fullname");
-    var contactEmail = document.getElementById("contact-email");
-    var contactContact = document.getElementById("contact-phone");
-    var contactNameErr = document.getElementById("contact-nameErr");
-    var contactEmailErr = document.getElementById("contact-emailErr");
-    var contactPhoneErr = document.getElementById("contact-phoneErr");
+    var leadUName = document.getElementById("lead-fullname");
+    var leadEmail = document.getElementById("lead-email");
+    var leadContact = document.getElementById("lead-phone");
+    var leadNameErr = document.getElementById("lead-nameErr");
+    var leadEmailErr = document.getElementById("lead-emailErr");
+    var leadPhoneErr = document.getElementById("lead-phoneErr");
 
-    var contactBudget = document.getElementById("contact-budget");
-    var contactSize = document.getElementById("contact-size");
-    var contactLocation = document.getElementById("contact-location");
-    var contactBudgetErr = document.getElementById("contact-budgetErr");
-    var contactSizeErr = document.getElementById("contact-sizeErr");
-    var contactLocationErr = document.getElementById("contact-locationErr");
+    var leadBudget = document.getElementById("lead-budget");
+    var leadSize = document.getElementById("lead-size");
+    var leadLocation = document.getElementById("lead-location");
+    var leadBudgetErr = document.getElementById("lead-budgetErr");
+    var leadSizeErr = document.getElementById("lead-sizeErr");
+    var leadLocationErr = document.getElementById("lead-locationErr");
 
-    nameValidate(contactUName, contactNameErr);
-    emailValidate(contactEmail, contactEmailErr);
-    phoneValidate(contactContact, contactPhoneErr);
+    nameValidate(leadUName, leadNameErr);
+    emailValidate(leadEmail, leadEmailErr);
+    phoneValidate(leadContact, leadPhoneErr);
 
-    RequiredField(contactBudget, contactBudgetErr);
-    RequiredField(contactSize, contactSizeErr);
-    RequiredField(contactLocation, contactLocationErr);
+    RequiredField(leadBudget, leadBudgetErr);
+    RequiredField(leadSize, leadSizeErr);
+    RequiredField(leadLocation, leadLocationErr);
 
     if (nameflag && emailflag && phoneflag && requireflag) {
       $("#successModalOverlay").show();
       $("#successModal").slideDown();
-      var formData = $("#myForm").serialize();
+      var formData = $("#lead-Form").serialize();
       $.ajax({
         type: "POST",
         url: "mail.php",
@@ -105,12 +105,52 @@ $(document).ready(function () {
           console.log("Code working fine");
         },
       });
-      $("#myForm")[0].reset();
+      $("#lead-Form")[0].reset();
       return true;
     } else {
       return false;
     }
   });
+
+
+
+  $("#contactSubmitButton").click(function (event) {
+    event.preventDefault();
+    var contactUName = document.getElementById("contact-fullname");
+    var contactEmail = document.getElementById("contact-email");
+    var contactPhone = document.getElementById("contact-phone");
+    var contactNameErr = document.getElementById("contact-nameErr");
+    var contactEmailErr = document.getElementById("contact-emailErr");
+    var contactPhoneErr = document.getElementById("contact-phoneErr");
+
+
+    nameValidate(contactUName, contactNameErr);
+    emailValidate(contactEmail, contactEmailErr);
+    phoneValidate(contactPhone, contactPhoneErr);
+
+    if (nameflag && emailflag && phoneflag) {
+      $("#successModalOverlay").show();
+      $("#successModal").slideDown();
+      var formData = $("#contact-Form").serialize();
+      $.ajax({
+        type: "POST",
+        url: "mail.php",
+        dataType: "json",
+        data: formData,
+        success: function (response) {
+          console.log("Code working fine");
+        },
+      });
+      $("#contact-Form")[0].reset();
+      return true;
+    } else {
+      return false;
+    }
+  });
+
+
+
+
 
   $("#closeSuccessModal").click(function () {
     $("#successModal").slideUp();

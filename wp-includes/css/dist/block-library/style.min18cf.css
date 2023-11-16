@@ -3551,13 +3551,6 @@ html :where(.is-position-sticky) {
 }
 .input-field {
   width: 50%;
-
-  & p {
-    margin: 0;
-    color: #d9534f;
-    font-size: 12px;
-    line-height: 1.5;
-  }
 }
 .btn-box {
   margin-top: 20px;
@@ -3565,13 +3558,6 @@ html :where(.is-position-sticky) {
 .input-select-field {
   position: relative !important;
   width: 50%;
-
-  & p {
-    margin: 0;
-    color: #d9534f;
-    font-size: 12px;
-    line-height: 1.5;
-  }
 }
 .input-select-field::after {
   font-family: "Font Awesome 5 Free";
@@ -3584,4 +3570,28 @@ html :where(.is-position-sticky) {
   right: 15px;
   transform: translateY(-15%);
   z-index: 999;
+}
+.text-danger {
+  margin: 0;
+  color: #d9534f;
+  font-size: 12px;
+  line-height: 1.5;
+}
+#contact-Form > div {
+  margin-bottom: 10px;
+}
+
+#swiper-location-text .swiper-slide{
+  position: relative;
+
+  & p{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    background-color: #cccccc7d;
+    color: #000;
+    bottom: -20px;
+    font-weight: 500;
+    font-size: 20px;
+  }
 }
