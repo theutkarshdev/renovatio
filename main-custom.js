@@ -1,3 +1,5 @@
+var nameflag,emailflag,phoneflag,requireflag = false;
+
 function nameValidate(uName, nameErr) {
   var nameRegex = /^[a-zA-Z0-9 ]{3,30}$/;
   if (uName.value !== "" && nameRegex.test(uName.value)) {
@@ -47,8 +49,22 @@ function validateTextarea(txt, txtErr) {
     txtErr.innerHTML = "*Links are Not valid";
     txt.style.borderColor = "#d9534f";
     messegeflag = false;
-  } else txtErr.innerHTML = "";
-  messegeflag = true;
+  } else {
+    txtErr.innerHTML = "";
+    messegeflag = true;
+  }
+}
+
+function RequiredField(field, Err) {
+  if (field.value === "") {
+    Err.innerHTML = "*This field is required";
+    field.style.borderColor = "#d9534f";
+    requireflag = false;
+  } else {
+    Err.innerHTML = "";
+    field.style.borderColor = "#ccc";
+    requireflag = true;
+  }
 }
 
 $(document).ready(function () {
@@ -61,13 +77,22 @@ $(document).ready(function () {
     var contactEmailErr = document.getElementById("contact-emailErr");
     var contactPhoneErr = document.getElementById("contact-phoneErr");
 
+    var contactBudget = document.getElementById("contact-budget");
+    var contactSize = document.getElementById("contact-size");
+    var contactLocation = document.getElementById("contact-location");
+    var contactBudgetErr = document.getElementById("contact-budgetErr");
+    var contactSizeErr = document.getElementById("contact-sizeErr");
+    var contactLocationErr = document.getElementById("contact-locationErr");
+
     nameValidate(contactUName, contactNameErr);
     emailValidate(contactEmail, contactEmailErr);
     phoneValidate(contactContact, contactPhoneErr);
-    if (nameflag && emailflag && phoneflag) {
-      console.log(contactUName.value);
-      console.log(contactContact.value);
-      console.log(contactEmail.value);
+
+    RequiredField(contactBudget, contactBudgetErr);
+    RequiredField(contactSize, contactSizeErr);
+    RequiredField(contactLocation, contactLocationErr);
+
+    if (nameflag && emailflag && phoneflag && requireflag) {
       $("#successModalOverlay").show();
       $("#successModal").slideDown();
       var formData = $("#myForm").serialize();

@@ -2,7 +2,7 @@
 
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
-    $myCompanyName = "Multichain Media";
+    $myCompanyName = "AirBrick Infra";
     $myCompanyEmail = "shubhameglobal20@gmail.com";
     $myCompanyEmailPassword = "hnfyaqzhmvavxgcn";   
     $myPersonalEmail = "utkarshk495@gmail.com";
@@ -29,7 +29,7 @@
         $mail->addReplyTo($_POST['sender_email'], $_POST['sender_name']);
 
         $mail->isHTML(true);
-        $mail->Subject = $_POST['sender_subject'];
+        $mail->Subject = "A New Form Submitted";
         $clientdata = '<!DOCTYPE html>
 						<html>
 						<head>
@@ -52,10 +52,6 @@
 						<h2>A New Form Submitted</h2>
 
 						<table>
-                        <tr>
-						    <td style="width:80px">Subject</td>
-						    <td>'.$_POST["sender_subject"].'</td>
-						  </tr>
 						  <tr>
 						    <td style="width:80px">Name</td>
 						    <td>'.$_POST["sender_name"].'</td>
@@ -68,11 +64,20 @@
 						    <td style="width:80px">Contact</td>
 						    <td>'.$_POST["sender_phone"].'</td>
 						  </tr>
-						 
 						  <tr>
-						    <td style="width:80px">Messege</td>
-						    <td>'.$_POST["message"].'</td>
+						    <td style="width:80px">Budget</td>
+						    <td>'.$_POST["sender_budget"].'</td>
 						  </tr>
+						  <tr>
+						    <td style="width:80px">Size</td>
+						    <td>'.$_POST["sender_size"].'</td>
+						  </tr>
+                          <tr>
+						    <td style="width:80px">Location</td>
+						    <td>'.$_POST["sender_location"].'</td>
+						  </tr>
+						 
+		
 						</table>
 
 						</body>
