@@ -3481,7 +3481,7 @@ html :where(.is-position-sticky) {
 
 .main-lead-form {
   width: 100%;
-  max-width: 540px;
+  max-width: 500px;
   background: #fff;
   position: absolute;
   top: 50%;
@@ -3525,17 +3525,17 @@ html :where(.is-position-sticky) {
     transform: translate(-50%, -50%);
     text-align: center;
 
-    & .modal-body h4{
+    & .modal-body h4 {
       margin: 20px 0 10px 0 !important;
       color: #198754;
       font-size: 20px;
     }
-    & p{
+    & p {
       font-size: 17px;
       margin: 0;
       line-height: 1.4;
     }
-    & svg{
+    & svg {
       width: 100px;
     }
     & button {
@@ -3549,16 +3549,39 @@ html :where(.is-position-sticky) {
     }
   }
 }
-.input-field{
+.input-field {
   width: 50%;
 
-  & p{
+  & p {
     margin: 0;
     color: #d9534f;
     font-size: 12px;
     line-height: 1.5;
   }
 }
-.btn-box{
+.btn-box {
   margin-top: 20px;
+}
+.input-select-field {
+  position: relative !important;
+  width: 50%;
+
+  & p {
+    margin: 0;
+    color: #d9534f;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+.input-select-field::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f078";
+  font-size: 14px;
+  color: rgb(117, 117, 117);
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-15%);
+  z-index: 999;
 }
