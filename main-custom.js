@@ -1,4 +1,7 @@
-var nameflag,emailflag,phoneflag,requireflag = false;
+var nameflag,
+  emailflag,
+  phoneflag,
+  requireflag = false;
 
 function nameValidate(uName, nameErr) {
   var nameRegex = /^[a-zA-Z0-9 ]{3,30}$/;
@@ -112,8 +115,6 @@ $(document).ready(function () {
     }
   });
 
-
-
   $("#contactSubmitButton").click(function (event) {
     event.preventDefault();
     var contactUName = document.getElementById("contact-fullname");
@@ -122,7 +123,6 @@ $(document).ready(function () {
     var contactNameErr = document.getElementById("contact-nameErr");
     var contactEmailErr = document.getElementById("contact-emailErr");
     var contactPhoneErr = document.getElementById("contact-phoneErr");
-
 
     nameValidate(contactUName, contactNameErr);
     emailValidate(contactEmail, contactEmailErr);
@@ -148,12 +148,49 @@ $(document).ready(function () {
     }
   });
 
-
-
-
-
   $("#closeSuccessModal").click(function () {
     $("#successModal").slideUp();
     $("#successModalOverlay").hide();
+  });
+
+  $(".brand-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 1000,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 3,
+      },
+      1000: {
+        items: 5,
+      },
+    },
+  });
+
+  $(".brand-carousel-2").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    rtl: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 3,
+      },
+      1000: {
+        items: 5,
+      },
+    },
   });
 });

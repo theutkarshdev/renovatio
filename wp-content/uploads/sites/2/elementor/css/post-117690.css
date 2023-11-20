@@ -22,10 +22,10 @@
   padding: 0px 0px 0px 0px;
 }
 .elementor-11 .elementor-element.elementor-element-733b2ef5 .bdt-slideshow .bdt-overlay-default {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0);
 }
 .elementor-11 .elementor-element.elementor-element-733b2ef5 .bdt-prime-slider-skin-slide .bdt-slide-shape {
-  background: #0a090959;
+  background: rgba(0, 0, 0, 0);
 }
 .elementor-11 .elementor-element.elementor-element-733b2ef5 .bdt-prime-slider .bdt-prime-slider-desc .bdt-main-title {
   width: 535px;
@@ -102,7 +102,7 @@
 .elementor-11 .elementor-element.elementor-element-b2cef8c .qodef-qi-animated-text .qodef-m-title {
   font-size: 116px;
   font-weight: 700;
-  line-height: 1em;
+  line-height: 1.2;
   letter-spacing: -0.04em;
 }
 .elementor-11 .elementor-element.elementor-element-b2cef8c .qodef-m-title {
@@ -306,7 +306,7 @@
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
   background-color: #1c1d24;
-  background-image: url("../../2023/06/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1.jpg");
+  background-image: url("../../2023/06/world_map_4.jpg");
   background-position: center center;
   background-size: cover;
 }
@@ -376,7 +376,7 @@
 .elementor-11 .elementor-element.elementor-element-8241bd9 .qodef-qi-animated-text .qodef-m-title {
   font-size: 116px;
   font-weight: 700;
-  line-height: 1em;
+  line-height: 1.2;
   letter-spacing: -0.04em;
 }
 .elementor-11 .elementor-element.elementor-element-8241bd9 .qodef-m-title {
@@ -788,7 +788,7 @@
 .elementor-11 .elementor-element.elementor-element-0251c81 .qodef-qi-animated-text .qodef-m-title {
   font-size: 116px;
   font-weight: 700;
-  line-height: 1em;
+  line-height: 1.2;
   letter-spacing: -0.04em;
 }
 .elementor-11 .elementor-element.elementor-element-0251c81 .qodef-m-title {
@@ -827,7 +827,7 @@
   justify-content: center;
 }
 .elementor-11 .elementor-element.elementor-element-0172485 .bdt-slideshow .bdt-overlay-default {
-  background-color: #00000054;
+  background-color: #00000000;
 }
 .elementor-11
   .elementor-element.elementor-element-0172485
@@ -919,7 +919,7 @@
 .elementor-11 .elementor-element.elementor-element-c561df0 .qodef-qi-animated-text .qodef-m-title {
   font-size: 116px;
   font-weight: 700;
-  line-height: 1em;
+  line-height: 1.2;
   letter-spacing: -0.04em;
 }
 .elementor-11 .elementor-element.elementor-element-c561df0 .qodef-m-title {
@@ -1183,7 +1183,7 @@
 .elementor-11 .elementor-element.elementor-element-0c07e5a .qodef-qi-animated-text .qodef-m-title {
   font-size: 116px;
   font-weight: 700;
-  line-height: 1em;
+  /* line-height: 1em; */
   letter-spacing: -0.04em;
 }
 .elementor-11 .elementor-element.elementor-element-0c07e5a .qodef-m-title {
@@ -1359,7 +1359,7 @@
 .elementor-11 .elementor-element.elementor-element-5df82ed .qodef-qi-animated-text .qodef-m-title {
   font-size: 116px;
   font-weight: 700;
-  line-height: 1em;
+  line-height: 1.2;
   letter-spacing: -0.04em;
 }
 .elementor-11 .elementor-element.elementor-element-5df82ed .qodef-m-title {
@@ -1395,13 +1395,13 @@
   .elementor-element.elementor-element-6c2f5ce
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
-  background-image: url("../../2023/06/loft-wall-living-room-have-sofa-decoration-3d-rendering.jpg");
+  background-image: url("../../2023/06/41.jpg");
   background-position: center center;
   background-size: cover;
 }
 .elementor-11 .elementor-element.elementor-element-6c2f5ce > .elementor-background-overlay {
-  background-color: #0000006e;
-  opacity: 0.88;
+  /* background-color: #0000006e;
+  opacity: 0.88; */
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 .elementor-11 .elementor-element.elementor-element-6c2f5ce {
@@ -1448,9 +1448,6 @@
 }
 .elementor-11 .elementor-element.elementor-element-d044966 .qodef-qi-button:hover {
   color: #000000;
-}
-.elementor-11 .elementor-element.elementor-element-d044966 .qodef-qi-button.qodef-type--icon-boxed .qodef-m-text {
-  padding: 10px 10px 10px 30px;
 }
 .elementor-11 .elementor-element.elementor-element-d044966 .qodef-qi-button.qodef-type--icon-boxed .qodef-m-icon {
   padding: 10px 0 10px;
@@ -1709,7 +1706,7 @@
 }
 @media (min-width: 768px) {
   .elementor-11 .elementor-element.elementor-element-c33586d {
-    width: 72.114%;
+    width: 75.114%;
   }
   .elementor-11 .elementor-element.elementor-element-8cf9373 {
     width: 27.842%;

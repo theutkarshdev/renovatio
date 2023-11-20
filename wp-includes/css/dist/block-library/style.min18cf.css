@@ -3482,7 +3482,7 @@ html :where(.is-position-sticky) {
 .main-lead-form {
   width: 100%;
   max-width: 500px;
-  background: #fff;
+  background: #0000007d;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -3494,6 +3494,13 @@ html :where(.is-position-sticky) {
     font-size: 1.2rem;
     text-align: center;
     margin-bottom: 30px;
+    color: #fff;
+  }
+
+  & button{
+    background-color: #073842 !important;
+    color: #fff !important;
+    border: none !important;
   }
 }
 .elementor-widget-container .footer-heading {
@@ -3595,3 +3602,4 @@ html :where(.is-position-sticky) {
     font-size: 20px;
   }
 }
+
