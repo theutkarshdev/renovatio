@@ -3497,7 +3497,7 @@ html :where(.is-position-sticky) {
     color: #fff;
   }
 
-  & button{
+  & button {
     background-color: #073842 !important;
     color: #fff !important;
     border: none !important;
@@ -3588,10 +3588,10 @@ html :where(.is-position-sticky) {
   margin-bottom: 10px;
 }
 
-#swiper-location-text .swiper-slide{
+#swiper-location-text .swiper-slide {
   position: relative;
 
-  & p{
+  & p {
     position: absolute;
     width: 100%;
     text-align: center;
@@ -3602,4 +3602,27 @@ html :where(.is-position-sticky) {
     font-size: 20px;
   }
 }
+.elementor-icon-list-item.headings {
+  font-size: 18px !important;
+  color: #000;
+  font-weight: 500;
+}
+.elementor-icon-list-item .qodef-e-social-icon {
+  background-color: #073842;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 50%;
+  color: #fff !important;
 
+  & i{
+    margin-top: 7px !important;
+  }
+  & a{
+    color: #fff !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}
