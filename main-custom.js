@@ -46,6 +46,10 @@ function onlyNumberKey(evt) {
   return true;
 }
 
+function forceLower(strInput) {
+  strInput.value=strInput.value.toLowerCase();
+}
+
 function validateTextarea(txt, txtErr) {
   var txtRegex = /http|\.([a-z]|[0-9])|\//gi;
   if (txtRegex.test(txt.value)) {
@@ -101,7 +105,7 @@ $(document).ready(function () {
       var formData = $("#lead-Form").serialize();
       $.ajax({
         type: "POST",
-        url: "mail.php",
+        url: "lead_mail.php",
         dataType: "json",
         data: formData,
         success: function (response) {
@@ -134,7 +138,7 @@ $(document).ready(function () {
       var formData = $("#contact-Form").serialize();
       $.ajax({
         type: "POST",
-        url: "mail.php",
+        url: "contact_mail.php",
         dataType: "json",
         data: formData,
         success: function (response) {
